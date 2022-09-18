@@ -1,7 +1,7 @@
 import numpy as np
 import string
 import random
-from search import funx
+from search.funx import *
 ai=[]
 l = []
 
@@ -43,7 +43,7 @@ for q in range(len(l)):
     for i in range(10):
       ai.append(puzz.T[i][k])
     for j in range(10):
-      if funx.lis(ai[j:z]) == l[q]:
+      if lis(ai[j:z]) == l[q]:
         print(l[q], "FOUND IN ROW NO.", k+1)
         break
       z+=1
@@ -54,7 +54,7 @@ for q in range(len(l)):
       for i in range(10):
         ai.append(puzz[i][k])
       for j in range(10):
-        if funx.lis(ai[j:z]) == l[q]:
+        if lis(ai[j:z]) == l[q]:
           print(l[q], "FOUND IN COLUMN NO.", k+1)
           break
         z+=1
